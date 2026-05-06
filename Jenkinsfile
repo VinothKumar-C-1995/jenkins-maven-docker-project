@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/YOUR_GITHUB_USERNAME/java-maven-docker.git'
+                git  'https://github.com/VinothKumar-C-1995/jenkins-maven-docker-project.git'
             }
         }
 
