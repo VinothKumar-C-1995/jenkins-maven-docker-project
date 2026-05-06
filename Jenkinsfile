@@ -11,7 +11,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git  'https://github.com/VinothKumar-C-1995/jenkins-maven-docker-project.git'
+                git 'https://github.com/VinothKumar-C-1995/jenkins-maven-docker-project.git'
             }
         }
 
@@ -37,6 +37,7 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f java-container || true
+                docker build -t java-maven-app .
                 docker run -d --name java-container java-maven-app
                 '''
             }
