@@ -38,7 +38,7 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f java-container || true
-                docker run -d --name java-container java-maven-app
+                docker run -d -p 8081:8081 --name java-container java-maven-app
                 '''
             }
         }
